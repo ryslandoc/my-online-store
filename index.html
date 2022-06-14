@@ -124,7 +124,27 @@
         </div>
     </div>
 </main>
-
-<!--<div id="root" class="wrapper-container"></div>-->
 </body>
 <script src="js/index.js"></script>
+<script type="module">
+    import Card from './js/index.js';
+
+    const product = {
+        "id": "76w0hz7015kkr9kjkav",
+        "images": [
+            "https://i.citrus.world/imgcache/size_800/uploads/shop/d/d/ddb25ea5bca61e0d820bd93540801d46.jpg",
+            "https://i.citrus.world/imgcache/size_800/uploads/shop/b/c/bc2e352f786b341908fe1dea2a47abea.jpg",
+        ],
+        "title": "Apple MacBook Pro M1 Pro Chip 16\" 32/2TB Space Gray (Z14W000MT) 2021",
+        "rating": 2.89,
+        "price": 125499,
+        "category": "laptops",
+        "brand": "macbook",
+    };
+
+    const component = new Card(product);
+
+    const myRootElement = document.getElementById('root');
+    myRootElement.append(component.componentElement);
+
+</script>
