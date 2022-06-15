@@ -127,6 +127,7 @@
 <script src="js/index.js"></script>
 <script type="module">
     import Card from './js/index.js';
+    import Pagination from './js/pagination.js';
 
     const product = {
         "id": "76w0hz7015kkr9kjkav",
@@ -153,11 +154,18 @@
         "brand": "apple",
     }
 
+    // Card
     const card = new Card(product);
 
     const myRootElement = document.getElementById('root');
     myRootElement.append(card.componentElement);
 
-    // card.update(phone);
+    card.update(phone);
+
+    // Pagination
+    const pagination = new Pagination();
+
+    const rootPagination = document.querySelector('#pagination');
+    rootPagination.append(pagination.element);
 
 </script>
