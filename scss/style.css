@@ -215,10 +215,13 @@ a {
 }
 .wrapper-cards-product .card-product .wrapper-main-info .wrapper-image {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  max-height: 180px;
 }
-.wrapper-cards-product .card-product .wrapper-main-info .wrapper-image .img {
-  max-width: 100%;
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-image img {
   width: 100%;
+  object-fit: contain;
 }
 .wrapper-cards-product .card-product .wrapper-main-info .wrapper-price {
   display: flex;
@@ -455,5 +458,30 @@ a {
 }
 
 /* End cart */
+/* Media */
+@media (min-width: 1264px) and (max-width: 1400px) {
+  .wrapper-cards-product .card-product {
+    width: 49%;
+  }
+
+  .wrapper-pagination .wrapper-box {
+    width: 80%;
+  }
+
+  .wrapper-pagination .wrapper-box .page-list .page-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .wrapper-pagination .wrapper-box .button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .wrapper-pagination .wrapper-box .button-next {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

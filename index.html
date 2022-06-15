@@ -112,7 +112,6 @@
                     </div>
                 </div>
                 <div id="root" class="wrapper-cards-product">
-
                     <!--                    <div class="card-product" style="background-color: transparent; box-shadow: unset ">-->
                     <!--                    </div>-->
                 </div>
@@ -139,12 +138,26 @@
         "rating": 2.89,
         "price": 125499,
         "category": "laptops",
-        "brand": "macbook",
+        "brand": "apple",
     };
 
-    const component = new Card(product);
+    const phone = {
+        "id": "72223w0hz7015kkr9kjkav",
+        "images": [
+            "https://i.citrus.world/imgcache/size_800/uploads/shop/c/d/cd5baef7baa32ae27bc742fc1d666a2e.jpg",
+        ],
+        "title": "Apple iPhone 13 128GB Starlight (MLPG3)",
+        "rating": 2.29,
+        "price": 31999,
+        "category": "smartphone",
+        "brand": "apple",
+    }
+
+    const card = new Card(product);
 
     const myRootElement = document.getElementById('root');
-    myRootElement.append(component.componentElement);
+    myRootElement.append(card.componentElement);
+
+    // card.update(phone);
 
 </script>

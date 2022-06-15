@@ -173,10 +173,13 @@ $white: #fff;
 
       .wrapper-image {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        max-height: 180px;
 
-        .img {
-          max-width: 100%;
+        img {
           width: 100%;
+          object-fit: contain;
         }
       }
 
@@ -453,3 +456,5 @@ $white: #fff;
 }
 
 /* End cart */
+
+@import "media";
