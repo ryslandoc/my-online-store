@@ -126,46 +126,37 @@
 </body>
 <script src="js/index.js"></script>
 <script type="module">
-    import Card from './js/index.js';
-    import Pagination from './js/pagination.js';
+    import Card from "./js/index.js";
+    import Pagination from "./js/pagination.js";
 
     const product = {
-        "id": "76w0hz7015kkr9kjkav",
-        "images": [
-            "https://i.citrus.world/imgcache/size_800/uploads/shop/d/d/ddb25ea5bca61e0d820bd93540801d46.jpg",
-            "https://i.citrus.world/imgcache/size_800/uploads/shop/b/c/bc2e352f786b341908fe1dea2a47abea.jpg",
-        ],
-        "title": "Apple MacBook Pro M1 Pro Chip 16\" 32/2TB Space Gray (Z14W000MT) 2021",
-        "rating": 2.89,
-        "price": 125499,
-        "category": "laptops",
-        "brand": "apple",
+        id: "22131323322",
+        title: "Монітор 32\" Apple Pro Display XDR Nano-texture glass (MWPF2GU/A)",
+        images: ["https://i.allo.ua/media/catalog/product/cache/3/image/434x494/602f0fa2c1f0d1ba5e241f914e856ff9/p/r/pro-display-gallery1-201909.jpg"],
+        price: 20333,
+        rating: 2.45,
+        category: "monitors",
     };
 
-    const phone = {
-        "id": "72223w0hz7015kkr9kjkav",
-        "images": [
-            "https://i.citrus.world/imgcache/size_800/uploads/shop/c/d/cd5baef7baa32ae27bc742fc1d666a2e.jpg",
-        ],
-        "title": "Apple iPhone 13 128GB Starlight (MLPG3)",
-        "rating": 2.29,
-        "price": 31999,
-        "category": "smartphone",
-        "brand": "apple",
-    }
+    const laptop = {
+        id: "221312143542",
+        title: "Монітор 32\" Apple Pro Display XDR Nano-texture glass (MWPF2GU/A)",
+        images: ["https://i.allo.ua/media/catalog/product/cache/3/image/434x494/602f0fa2c1f0d1ba5e241f914e856ff9/2/0/2003662_result_1.jpg"],
+        price: 19000,
+        rating: 2.25,
+        category: "laptops",
+    };
 
-    // Card
     const card = new Card(product);
 
-    const myRootElement = document.getElementById('root');
-    myRootElement.append(card.componentElement);
+    const pagination = new Pagination({activePageIndex : 3});
 
-    card.update(phone);
+    const myRootElement = document.querySelector('#root');
+    myRootElement.append(card.wrapperElement);
 
-    // Pagination
-    const pagination = new Pagination();
+    card.update(laptop);
 
-    const rootPagination = document.querySelector('#pagination');
-    rootPagination.append(pagination.element);
+    const paginationRootElement = document.querySelector('#pagination');
+    paginationRootElement.append(pagination.wrapperElement);
 
 </script>
