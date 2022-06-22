@@ -100,7 +100,7 @@
                 </div>
             </div>
 
-            <div class="right-side">
+            <div class="right-side" id="page">
                 <div class="wrapper-search">
                     <!-- SearchBox component -->
                     <div class="input-box">
@@ -112,12 +112,11 @@
                     </div>
                 </div>
                 <div id="root" class="wrapper-cards-product">
-                    <!--                    <div class="card-product" style="background-color: transparent; box-shadow: unset ">-->
-                    <!--                    </div>-->
+                    <!-- card product -->
                 </div>
 
                 <div id="pagination" class="wrapper-pagination">
-
+                    <!-- pagination -->
                 </div>
             </div>
         </div>
@@ -126,37 +125,11 @@
 </body>
 <script src="js/index.js"></script>
 <script type="module">
-    import Card from "./js/index.js";
-    import Pagination from "./js/pagination.js";
+    import OnlineStorePage from './js/index.js'
 
-    const product = {
-        id: "22131323322",
-        title: "Монітор 32\" Apple Pro Display XDR Nano-texture glass (MWPF2GU/A)",
-        images: ["https://i.allo.ua/media/catalog/product/cache/3/image/434x494/602f0fa2c1f0d1ba5e241f914e856ff9/p/r/pro-display-gallery1-201909.jpg"],
-        price: 20333,
-        rating: 2.45,
-        category: "monitors",
-    };
+    const storePage = new OnlineStorePage();
 
-    const laptop = {
-        id: "221312143542",
-        title: "Монітор 32\" Apple Pro Display XDR Nano-texture glass (MWPF2GU/A)",
-        images: ["https://i.allo.ua/media/catalog/product/cache/3/image/434x494/602f0fa2c1f0d1ba5e241f914e856ff9/2/0/2003662_result_1.jpg"],
-        price: 19000,
-        rating: 2.25,
-        category: "laptops",
-    };
-
-    const card = new Card(product);
-
-    const pagination = new Pagination({activePageIndex : 3});
-
-    const myRootElement = document.querySelector('#root');
-    myRootElement.append(card.wrapperElement);
-
-    card.update(laptop);
-
-    const paginationRootElement = document.querySelector('#pagination');
-    paginationRootElement.append(pagination.wrapperElement);
-
+    const pageElement = document.querySelector('#page');
+    pageElement.append(storePage.wrapper);
 </script>
+
