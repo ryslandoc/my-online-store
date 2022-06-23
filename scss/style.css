@@ -217,7 +217,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  max-height: 180px;
+  height: 150px;
 }
 .wrapper-cards-product .card-product .wrapper-main-info .wrapper-image img {
   width: 100%;

@@ -126,8 +126,9 @@
 <script src="js/index.js"></script>
 <script type="module">
     import OnlineStorePage from './js/index.js'
+    import {products} from "./js/products.js";
 
-    const storePage = new OnlineStorePage();
+    const storePage = new OnlineStorePage(products);
 
     const pageElement = document.querySelector('#page');
     pageElement.append(storePage.wrapper);
